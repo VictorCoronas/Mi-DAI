@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>El descubridor</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet" media="screen">    
+</head>
+<body>
+
+    <header class = "col-md-12">
+       <a href="/"><img src="../static/nombre.png"></a>
+        <form name="login" method="POST">
+				% if iniciado:
+					${iniciado}
+				% endif
+				% if form:
+					${form.render()}
+				% endif
+			</form>
+    </header>
+    
+    <div class = "container-fluid">
+        <div class= "row">
+            <div id="columna_izquierda" class="col-md-3">
+                <h1> Menu </h1>
+                <ul>
+                    <li><a href="/">Principal</a></li>
+                    % if iniciado:
+                        <li><a href="/informacion">Datos personales</a></li>
+                        <li><a href="/modifica">Modificar Datos</a></li>
+                        <li><a href="/rss">Rss</a></li>
+                        <li><a href="/fotos">Fotos</a></li>
+                        <li><a href="/mapa">Mapa</a></li>
+                        <li><a href="/charts">Gráficas</a></li>
+                        <li><a href="/chartsregistro">Inserta Gráficas</a></li>
+                        <li><a href="/chartsmuestra">Muestra Gráficas</a></li>
+                        <li><a href="/chartsjq">JQ</a></li>
+                        <li><a href="/twitter">Twitter</a></li>
+                    % endif
+                </ul>
+                    % if visitas:
+                        <h4>PÁGINAS VISITADAS</h4>
+                        ${visitas}
+                    % endif
+            </div>
+            <div id="columna_derecha" class="col-md-9">
+                    % if titulo:
+                        <h3>${titulo}</h3>
+                    % endif
+                    % if not iniciado:
+                        <P> Debes de estar registrado para poder ver el contenido. </P>  
+                    % endif
+                    <div id="twitter">
+                    <form name="twitter" method="POST">
+                    % if form4:
+                        ${form4.render()}
+                    % endif
+                    </form>
+                    </div>
+                    <h2> Los tweets cercanos son: </h2>
+                    <div class="row">
+                        <div class="col-lg-12">
+                    <section id="tweets">
+						 % for row in tweet:
+							<b> - Tweet: </b>${row}
+							<br><br>
+						  % endfor
+                    </section>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="col-md-12">
+            <p>Copyright &copy; 2014 - <a href="">El descubridor</a> &middot; All Rights Reserved | <a href="">Contacto</a> | <a href="">Cómo se hizo</a></p></br><p>C/ Jose Tomas, s/n, 18180, (Poligono Asegra),Granada</p>
+    <a href="https://twitter.com/victorCoronas" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @victorCoronas</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="victorCoronas" data-lang="es" data-related="victorCoronas">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </footer>
+    <!-- Librerias -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+#pagina{
+    width: 900px;
+    margin: auto;
+}
+#header{
+background: red;
+height: 180px;
+width: 900px;
+}
+
+#menu{
+background: yellow;
+    height: 500px;
+    width: 700px;
+    float: right;
+
+}
+
+#contenido{
+background: green;
+    height: 500px;
+    width: 200px;
+}
+
+#footer{
+background: orange;
+    height: 110px;
+    width: 900px;
+}

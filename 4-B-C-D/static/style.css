@@ -1,0 +1,72 @@
+body {
+    background-color: #fff;
+}
+
+header {
+    background-color: #ebeeef;
+    height: 140px;
+}
+
+header img {
+    margin-top: 50px;
+    margin-left: 35%
+}
+header form {
+    float: right;
+}
+header input, header button {
+	margin-left: 10px;
+	color: rgb(50,50,50);
+}
+#columna_izquierda {
+	background-color: #adb9c4;
+    height: 450px;
+}
+
+#columna_derecha {
+    background-color: #d7d7dd;
+    border: 3px solid black;
+    height: 450px;
+}
+
+footer {
+    background-color: #e4e5e6;
+    text-align: center;
+}
+
+h1{
+    text-decoration: underline;
+}
+
+h3 {
+    text-decoration:underline;     
+}
+h4{
+    text-decoration: underline;
+}
+#map-canvas {
+    height: 250px;
+    width: 600px;
+}
+#directions-panel {
+    height: 250px;
+    float: right;
+    width: 300px;
+    overflow: auto;
+}
+#tweets{
+    height: 270px;
+    float: left;
+    border-color: #29aaef;
+    border-width: 3px;
+    border-style: ridge;
+    overflow:auto;
+}
+#rss{
+    height: 270px;
+    float: left;
+    border-color: #29aaef;
+    border-width: 3px;
+    border-style: ridge;
+    overflow:auto;
+}

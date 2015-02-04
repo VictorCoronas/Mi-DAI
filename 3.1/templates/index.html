@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>El descubridor</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header class = "col-md-12">
+       <a href="/"><img src="../static/nombre.png"></a>
+        <form name="login" method="POST">
+				% if iniciado:
+					${iniciado}
+				% endif
+				% if form:
+					${form.render()}
+				% endif
+			</form>
+    </header>
+    
+    <div class = "container-fluid">
+        <div class= "row">
+            <div id="columna_izquierda" class="col-md-3">
+                <h1> Menu </h1>
+                <ul>
+                    <li><a href="/">Principal</a></li>
+                    % if iniciado:
+                        <li><a href="/informacion">Datos personales</a></li>
+                        <li><a href="/modifica">Modificar Datos</a></li>
+                        <li><a href="/fotos">Fotos</a></li>
+                    % endif
+                </ul>
+                    % if visitas:
+                        <h4>PÁGINAS VISITADAS</h4>
+                        ${visitas}
+                    % endif
+            </div>
+            <div id="columna_derecha" class="col-md-9">
+                    % if titulo:
+                        <h3>${titulo}</h3>
+                    % endif
+                    % if not iniciado:
+                        <P> Debes de estar registrado para poder ver el contenido. </P>  
+                    % endif
+                    % if personal:
+                        ${personal}
+                    % endif
+                    <form name="cambia" method="POST">
+                    % if form2:
+                        ${form2.render()}
+                    % endif
+                    % if felicidades:
+                        ${felicidades}
+                    % endif
+			         </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="col-md-12">
+            <p>Copyright &copy; 2014 - <a href="">El descubridor</a> &middot; All Rights Reserved | <a href="">Contacto</a> | <a href="">Cómo se hizo</a></p></br><p>C/ Jose Tomas, s/n, 18180, (Poligono Asegra),Granada</p>
+    </footer>
+    <!-- Librerias -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

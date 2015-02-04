@@ -1,0 +1,13 @@
+$def with (form)
+<!DOCTYPE html>
+<html>
+<body>
+
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Intentalo de nuevo, valores erroneos:</p>
+$:form.render()
+<input type="submit" />    
+</form>
+
+</body>
+</html>

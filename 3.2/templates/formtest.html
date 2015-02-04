@@ -1,0 +1,15 @@
+$def with (form)
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <title>Pagina</title>
+    </head>
+    <body>
+        <h1>Inicio del formulario</h1>
+<form name="main" method="post"> 
+	$if not form.valid: <p class="error">Intentalo de nuevo, valores erroneos:</p>
+	$:form.render() 
+</form>
+</body>
+</html>

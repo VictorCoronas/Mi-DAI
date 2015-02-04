@@ -1,0 +1,217 @@
+* {
+	margin: 0; padding: 0;
+}
+body {
+	text-align: center;
+	font: 12px Verdana;
+	color: #112222;
+}
+
+a {
+	color: #234566;
+}
+
+/** BEGIN wrapper **/
+#wrapper {
+	width: 1200px;
+	margin: auto auto;
+	text-align: left;
+	padding: 25px 0;
+    
+}
+/** END wrapper **/
+
+/** BEGIN header **/
+#header {
+	padding-bottom: 30px;
+}
+
+/** BEGIN PUBLICIDAD ARRIBA **/
+	#header .arr {
+        display: block;
+        padding-left: 100px;
+        background: ;
+	}
+	#header .arr a{
+			display: block;
+			width: 1000px; height: 150px;
+			text-indent: -9999px;
+			outline: none;
+            background: url(images/publiA.png) no-repeat 0 0;
+
+	}
+/** END PUBLICIDAD ARRIBA **
+
+/** BEGIN PUBLICIDAD izquierda **/
+	#header .izq {
+        display: block;
+        float: left;
+        width: 130px; height: 600px;
+        background: red;
+	}
+	#header .izq a{
+			display: block;
+			width: 130px; height: 600px;
+			text-indent: -9999px;
+			outline: none;
+            background: url(images/marketing1.jpg) no-repeat 0 0;
+	}
+/** END PUBLICIDAD izquierda **/
+
+/** BEGIN PUBLICIDAD derecha **/
+	#header .der {
+        display: block;
+        float: right;
+        width: 130px; height: 600px;
+        background: red;
+	}
+	#header .der a{
+			display: block;
+			width: 130px; height: 600px;
+			text-indent: -9999px;
+			outline: none;
+            background: url(images/marketing1.jpg) no-repeat 0 0;
+	}
+/** END PUBLICIDAD derecha **/
+
+/** BEGIN NOMBRE PERIODICO **/
+	#header h1 {
+		float: left;
+        padding: 50px 285px 40px;
+	}
+    #header h1 a {
+			display: block;
+			width: 370px; height: 41px;
+			text-indent: -9999px;
+			outline: none;
+			background: url(images/nombre.png) no-repeat 0 0;
+    }
+	#header h1 form{
+        padding-top: 20px
+	}
+
+
+/** END NOMBRE PERIODICO **/
+
+/** BEGIN SECCIONES **/
+	#header .categories {
+		list-style-type: none;
+        width: 311px;
+		background: url(images/navigation.gif);
+		border: 1px solid #CCCCCC;
+		overflow: hidden;
+        float:left;
+	}
+    #header .categories li {
+        text-transform: uppercase;
+		font-size: 1.2em;
+        padding-left: 40px;
+		padding-right: 30px;
+        background: url(images/divider.gif) no-repeat right 1px;
+    }
+    #header .categories li a {	
+            display: block;
+            padding: 11px 1px;
+		}
+        #boton1 a{
+            border-bottom:5px solid #f00;
+            color: #f00;
+        }
+
+        #boton2 a{
+            border-bottom:5px solid blue;
+            color: blue;
+        }
+        #boton3 a{
+            border-bottom:5px solid green;
+            color: green;
+        }
+        #boton4 a{
+            border-bottom:5px solid orange;
+            color: orange;
+        }
+        #boton5 a{
+            border-bottom:5px solid yellow;
+            color: yellow;
+        }
+        #boton6 a{
+            border-bottom:5px solid purple;
+            color: purple;
+        }
+/** END SECCIONES **/
+
+/** BEGIN content **/
+#content {
+	width: 313px;
+	float: left;
+}
+
+	#content .articles {
+		border: 1px solid #CBDDDD;
+	}	
+		#content .articles h2.title {
+			margin-bottom: 0;
+		}
+		#content .articles .details {
+			clear: both;
+			font-size: 0.9em;
+			height: 22px;
+			background: url(images/details.gif) repeat-x 0 0;
+			margin-bottom: 10px;
+		}
+			#content .articles .details .l {
+				float: left;
+				padding: 3px;
+			}
+				#content .articles .details .l a {
+					text-decoration: none;
+				}
+		#content .articles h2 {
+			font-size: 1.3em;
+			margin-bottom: 10px;
+			line-height: 1.4em;
+		}
+		#content .articles .post {
+			padding: 10px;
+		}
+		#content .articles .post .thumb {
+			width: 200px; height: 150px;
+			overflow: hidden;
+			margin: 0 10px 15px 0;
+		}
+			#content .articles .post .thumb img {
+				width: 200px;
+			}
+		#content .articles .post p {
+			line-height: 1.4em;
+			margin-bottom: 10px;
+		}
+
+	#content h2.title {
+		font-size: 0.8em;
+		text-transform: uppercase;
+		background: url(images/header1.gif) no-repeat center 0;
+		color: #ffffff;
+		width: 175px;
+		text-align: center;
+		padding: 1px 0 3px;
+		margin-bottom: 10px;
+	}
+/** END content **/
+
+/** BEGIN footer **/
+#footer {
+    clear:both;
+	display: block;
+	border: 1px solid #CBDDDD;
+	padding: 10px;
+	font-size: 0.9em;
+	color: #234566;
+}
+	#footer a {
+		text-decoration: none;
+		color: #112222;
+	}
+/** END footer **/
+
+
