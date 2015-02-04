@@ -1,1 +1,1 @@
-#Practicas de la asignatura DAI
+#Prácticas de la asignatura DAI
